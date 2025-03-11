@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มการเสนอออกแบบกราฟิก</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>รายงานการเสนอออกแบบกราฟิก</h1>
+        <form id="graphic-form" action="https://script.google.com/macros/library/d/1zzHAkK1CJoRJb4lnRA8O_JnwKgKWTZkKMLTSisSm_WVSABpUF4b52aGb/1" method="post" enctype="multipart/form-data">
+            <!-- ส่วนที่ 2 -->
+            <section class="form-section">
+                <h2>งานประชาสัมพันธ์</h2>
+                <label for="description">คำอธิบาย (ระบุหรือไม่ก็ได้):</label>
+                <textarea id="description" name="description" placeholder="กรุณาระบุคำอธิบาย (ถ้ามี)"></textarea>
+
+                <label for="content">เนื้อหางาน:</label>
+                <textarea id="content" name="content" placeholder="กรุณาระบุเนื้อหางาน"></textarea>
+
+                <label for="file-upload">ไฟล์สำหรับประชาสัมพันธ์ (อัพโหลด):</label>
+                <input type="file" id="file-upload" name="file-upload">
+                <label for="promotion-channel">ช่องทางการประชาสัมพันธ์:</label>
+                <select id="promotion-channel" name="promotion-channel">
+                    <option value="none">ไม่ต้องประชาสัมพันธ์</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="website">Website</option>
+                    <option value="line">Line official</option>
+                </select>
+            </section>
+
+            <!-- ส่วนที่ 3 -->
+            <section class="form-section">
+                <h2>Request Graphic</h2>
+                <label for="full-name">ชื่อ-นามสกุล:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="กรุณาระบุชื่อ-นามสกุล" required>
+
+                <label for="project-name">ชื่อชิ้นงาน/โครงการ:</label>
+                <input type="text" id="project-name" name="project-name" placeholder="กรุณาระบุชื่อชิ้นงาน/โครงการ" required>
+
+                <label for="size">ขนาดของชิ้นงาน:</label>
+                <input type="text" id="size" name="size" placeholder="กรุณาระบุขนาดของชิ้นงาน" required>
+
+                <label for="usage-date">วันใช้งานจริง:</label>
+                <input type="date" id="usage-date" name="usage-date" required>
+
+                <label for="deadline">กำหนดส่งงานล่วงหน้า:</label>
+                <select id="deadline" name="deadline">
+                    <option value="1_day">1 วัน</option>
+                    <option value="3_days">ล่วงหน้า 3 วัน</option>
+                    <option value="5_days">ล่วงหน้า 5 วัน</option>
+                    <option value="7_days">ล่วงหน้า 7 วัน</option>
+                </select>
+
+                <label for="drafts">ดราฟ:</label>
+                <select id="drafts" name="drafts">
+                    <option value="draft_1">ดราฟ 1</option>
+                    <option value="draft_2">ดราฟ 2</option>
+                    <option value="draft_3">ดราฟ 3</option>
+                    <option value="draft_4">ดราฟ 4</option>
+                </select>
+
+                <label for="file-type">ประเภทไฟล์:</label>
+                <select id="file-type" name="file-type">
+                    <option value="jpeg">JPEG</option>
+                    <option value="png">PNG</option>
+                    <option value="pdf">PDF</option>
+                    <option value="ppt">PowerPoint</option>
+                    <option value="print">ไฟล์สำหรับงานพิมพ์</option>
+                </select>
+
+                <label for="details">รายละเอียดงาน:</label>
+                <textarea id="details" name="details" placeholder="กรุณาระบุรายละเอียดของงาน"></textarea>
+
+                <label for="theme">ธีม โทนสีที่ต้องการ ฟอนต์ตัวหนังสือ:</label>
+                <textarea id="theme" name="theme" placeholder="ระบุธีม ฟอนต์ หรือโทนสีที่ต้องการ"></textarea>
+
+                <label for="promotion-channel">ช่องทางการประชาสัมพันธ์:</label>
+                <select id="promotion-channel" name="promotion-channel">
+                    <option value="none">ไม่ต้องประชาสัมพันธ์</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="website">Website</option>
+                    <option value="line">Line official</option>
+                </select>
+
+                <label for="reference">ตัวอย่างรูปแบบงาน สำหรับใช้อ้างอิง:</label>
+                <input type="file" id="reference" name="reference">
+            </section>
+
+            <!-- ข้อมูลประกอบ -->
+            <section class="form-section">
+                <h2>NOTE (ข้อมูลประกอบ)</h2>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="กรุณาระบุอีเมล" required>
+
+                <label for="additional-info">อื่นๆ:</label>
+                <textarea id="additional-info" name="additional-info" placeholder="กรุณาระบุข้อมูลเพิ่มเติม"></textarea>
+            </section>
+
+            <button type="submit" class="submit-btn">ส่งข้อมูล</button>
+        </form>
+    </div>
+</body>
+</html>
